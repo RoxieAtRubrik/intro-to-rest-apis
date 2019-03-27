@@ -17,7 +17,8 @@ The Rubrik RESTful API (v1) web page opens.
 
 Browse through the Rubrik CDM API documentation and note the different endpoints available to you. 
 
-| Note: Rubrik CDM API documentation is available online as well. You can find it [here]()
+| Note: Rubrik CDM API documentation is available online as well. You can find it [here](https://github.com/rubrikinc/api-documentation) |
+| --- |
 
 ## Exercise 1-2: Rubrik CDM API Explorer 
 In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
@@ -78,26 +79,35 @@ The response body contains an array with the session ID, the Rubrik cluster soft
   "latestEulaVersion":"1.0"
 }
 ```
+
 Notice the `-k` flag, why is the `-k` flag required?
 
+| ANSWER: `-k` to bypass an alert about the self-signed certificate. See `https://<node-ip-addres>/docs/v1/#section/Authentication` for more information |
+| --- |
 
 Try the same command without the `-k` flag
 
-
 # Section 2: Getting Around Using an API
 
 
 ## Exercise 2-1: Using the API Explorer to generate a curl command to get cluster info 
+In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/playground`
+ 
+ Select the `/api/v1/cluster` endpoint
 
-In Google Chrome, open a new tab and type https://<node-ip-address>/docs/v1/playground
- Select the /api/v1/cluster end point
-
+![Cluster Endpoint](/img/image5.png)
 
-Press the ‘Try it out!’ button
+Press the **Try it out!** button
+
 Copy and paste the curl command
+
 Execute the curl command in the CLI
-Why does it give a error?
-Fix the error by specifying the right flag. The correct output should look this:
+
+Why does it give an error?
+
+Fix the error by specifying the right flag. The correct output should look similar to this:
+
+```
 {
   "id":"cc19573c-db6c-418a-9d48-067a256543ba",
  "version":"5.0.0~DA1-583",
@@ -108,11 +118,13 @@ Fix the error by specifying the right flag. The correct output should look this:
  "acceptedEulaVersion":"1.0", 
  "latestEulaVersion":"1.0"
 }
-
-Section 4: Retrieving Information for Daily Operations/Tasks
-Exercise 4-1: Using the API Explorer to get the number of Unassigned VMs (VMware)
+```
 
-Instead of the UI dashboard you can also find the Unprotected VMs using the API, in this exercise you learn how to use parameters.
+# Section 3: Retrieving Information for Daily Operations/Tasks
+
+## Exercise 3-1: Using the API Explorer to get Number of Unassigned VMs (VMware)
+
+Instead of the UI dashboard you can also find the Unprotected VMs using the API. This exercise will teach you learn how to use parameters.
 
 Use the API explorer to find all the VMware VMs without an SLA assigned    . 
 
