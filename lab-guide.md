@@ -11,7 +11,7 @@ A quick way to become familiar with the Rubrik REST API, is to use the Rubrik RE
 ## Exercise 1-1: Rubrik CDM API Documentation
 In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
-The Rubrik RESTful API (v1) web page opens (shown below).
+The Rubrik RESTful API (v1) web page opens.
 
 ![API Docs](/img/image1.png)
 
@@ -22,27 +22,32 @@ Browse through the Rubrik CDM API documentation and note the different endpoints
 ## Exercise 1-2: Rubrik CDM API Explorer 
 In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
-The Rubrik RESTful API Explorer page opens (shown below).
+The Rubrik RESTful API Explorer page opens.
 
+![API Explorer-v1](/img/image2.png)
 
+On the top-right hand of the page, click **Authorize**. The Available Authorizations page opens.
 
-On the top-right hand of the page, click Authorize. The Available Authorizations page opens (shown below).
+![Available Authorizations](/img/image3.png)
 
-Authorize using the following:
-username - admin
-password - Welcome10!Rubrik
-Click Authorize.
-In Google Chrome, open a new tab and type https://<node-ip-address>/docs/internal/playground The Rubrik RESTful API Explorer page opens (shown below).
+Enter the Rubrik CDM credential information found in [Lab Topology](/lab-topology.md).
 
+Click **Authorize**.
 
+In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/internal/playground` The Rubrik RESTful API Explorer page opens.
 
-
-Exercise 2-3: Rubrik RESTful API Authentication (using curl) and using the API from the command line
-In Google Chrome, open a new tab and type https://<node-ip-address>/docs/v1/#section/Authentication/Authentication-session
-Read the chapter about the authentication. 
+![API Explorer-internal](/img/image4.png)
+
+## Exercise 1-3: Rubrik CDM API Authentication (using curl) and using the API from command line
+In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication. 
+
 Generate a bearer token using the BasicAuth method using the curl command:
-curl -k -u admin:pass -X POST "https://$cluster_address/api/v1/session"
-The rubrik REST API server returns to following response body:
+
+`curl -k -u admin:pass -X POST "https://$cluster_address/api/v1/session"`
+
+The Rubrik REST API server returns to following response body:
+
+```
 {
   “id”: “$session_id”,
   “organization_id” : “$organization_id”,
@@ -50,11 +55,18 @@ The rubrik REST API server returns to following response body:
   “token”: “$token_id”,
   “expiration”: “$expiration”
 }
- Copy your token ($token_id) to get the Rubrik cluster software version, and the API version. In this curl command, the GET request to /cluster uses the -H flag to provide the Authorization: Bearer $token_id value.
+```
+ 
+ Copy your token (`$token_id`) to get the Rubrik cluster software version, and the API version. In this curl command, the GET request to `/cluster` uses the `-H` flag to provide the Authorization: Bearer `$token_id` value.
 
+```
 curl -k -H "Authorization: Bearer $token_id" -X GET
   "https://$cluster_address/api/v1/cluster/me"
+```
+
 The response body contains an array with the session ID, the Rubrik cluster software version, and the API version.
+
+```
 {
   "id":"cc19573c-db6c-418a-9d48-067a256543ba",
   "version":"5.0.0~DA1-583",
@@ -65,12 +77,17 @@ The response body contains an array with the session ID, the Rubrik cluster soft
   "acceptedEulaVersion":"1.0", 
   "latestEulaVersion":"1.0"
 }
-Notice the -k flag, why is the -k flag required? (see answer in the appendix)
-Try the same command without the -k flag
+```
+Notice the `-k` flag, why is the `-k` flag required?
+
+
+Try the same command without the `-k` flag
 
 
-SECTION 3 Getting around with API
-Exercise 3-1: Using the API Explorer to generate a curl command to get cluster info 
+# Section 2: Getting Around Using an API
+
+
+## Exercise 2-1: Using the API Explorer to generate a curl command to get cluster info 
 
 In Google Chrome, open a new tab and type https://<node-ip-address>/docs/v1/playground
  Select the /api/v1/cluster end point
