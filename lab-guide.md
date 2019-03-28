@@ -1,10 +1,10 @@
 # Section 1: Rubrik API Basics
 
-The Rubrik REST API provides a RESTful interface for working with Rubrik clusters and Rubrik Edge virtual appliances. The Rubrik REST API can be used to query, configure, and control nearly all of the operations of the Rubrik software.
+The Rubrik CDM APIs are organized to conform the design principles of Representational State Transfer (REST). We also use the JSON data format for requests and responses. Whether you will be using our APIs directly to make your own custom integration or interacting with our SDKs, it's still worth taking the time to familiarize yourself on how REST APIs work and what they can do for you.
+
+Our REST APIs are designed to be simple to understand and use, as well as be predictable with standard HTTP response codes for any and all API errors to allow you to interact securely with the API. Check out the API explorer for more information on specific endpoints, their parameters and response data formats.
 
 Through authenticated and encrypted interaction with the Rubrik REST API server, perform any of the operations that are available through the Rubrik web UI and many bulk-type operations that might otherwise be difficult or impossible to perform.
-
-This documentation provides reference information and examples of typical workflows for the Rubrik REST API. For more detailed information about working with Rubrik clusters and Rubrik Edge virtual appliances refer to the Rubrik User Guide.
 
 A quick way to become familiar with the Rubrik REST API, is to use the Rubrik REST API Explorer. 
 
@@ -178,89 +178,20 @@ One important metric for daily operations is the cluster run rate, in other word
 
 ![By Count](/img/image13.png)
 
- 
+# SECTION 6 Other useful tricks and tools working with REST APIs
 
-# SECTION 6 Other useful tricks and tools working with REST api’s
+## Exercise 6-1: How to create a .CSV output from JSON data.
 
-## Exercise 6-1: How to create a csv output from JSON data.
+List all VM using the API explorer and copy all the data from the response body.
 
-List all vm using the api explorer and copy all the data from the response body.
+![](/img/image107.png)
 
-Go to the following website https://json-csv.com/
-Paste your json in the paste box.
+Go to the following website: `https://json-csv.com/`
+Paste your JSON in the paste box.
 
-This will generate a CSV file for you or even more
-Explore the other formats .
+This will generate a .CSV file for you or even other formats. 
 
-Note: this is site is not related to Rubrik, it’s your own responsibilty to decided wether you can use this site or not with your data.
+![](/img/image14.png)
 
-# Exercise: use postman with Rubrik’s rest api.
+## Exercise 6-2: Use Postman with Rubrik CDM API.
 
-Download postman and install it on your computer, there is also a postman chrome plugin.
-
-Note: postman is an external tool without any relation to Rubrik.
-
-Play with postman to see how it works 
-Below is one example how to use postman for a GET request to get you started
-Important remarks: you have to select basic auth the fill in you password and username.
-
-
-
-Try to do a couple of the exercises using postman also use the post method.
-
-Postman has a very powerfull feature, it’s can generate code for the api calls.
-
-
-See example below.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Exercise 6-2: How to use google chrome to explore how the Rubrik GUI uses the rest api.
-
-Enable developer tools in chrome while you are in the Rubrik GUI.
-
-<need an english browser example here>
-
-Your browser while look like this :
-
-
-
-On the right hand pane you will see which api’s are used by the Rubrik gui.
-
-In this exercise we are going to create a on demand snapshot of the VM you have snap shotted in the previous exercise. With same SLA domain you have used in the previous exercise.
-
-Make sure you select the network tab in the developer pane. And clear the screen just before you start the snapshot.
-
-
-
-
-
-After the you created snapshot your screen should look like this:
-
-
-
-Now click on the snapshot api call (annotated in the example)
-
-
-With developer tools you can inspect headers and which end points are called with the method. So you can learn which end points you need to perfrom certain actions.
-
-If you scroll down in the righthand pane you can also see the request payload if the request method is POST:
-
-
-This is the SLA id you have also specified in the previous exercise.
