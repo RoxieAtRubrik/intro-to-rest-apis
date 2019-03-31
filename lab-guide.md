@@ -6,10 +6,10 @@ Our REST APIs are designed to be simple to understand and use, as well as be pre
 
 Through authenticated and encrypted interaction with the Rubrik REST API server, perform any of the operations that are available through the Rubrik web UI and many bulk-type operations that might otherwise be difficult or impossible to perform.
 
-A quick way to become familiar with the Rubrik REST API, is to use the Rubrik REST API Explorer. 
+A quick way to become familiar with the Rubrik REST API is to use the Rubrik REST API Explorer. 
 
 ## Exercise 1-1: Rubrik CDM API Documentation
-In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
 The Rubrik RESTful API (v1) web page opens.
 
@@ -21,7 +21,7 @@ Browse through the Rubrik CDM API documentation and note the different endpoints
 | --- |
 
 ## Exercise 1-2: Rubrik CDM API Explorer 
-In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
 The Rubrik RESTful API Explorer page opens.
 
@@ -35,12 +35,12 @@ Enter the Rubrik CDM credential information found in [Lab Topology](/lab-topolog
 
 Click **Authorize**.
 
-In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/internal/playground` The Rubrik RESTful API Explorer page opens.
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/internal/playground` The Rubrik RESTful API Explorer page opens.
 
 ![API Explorer-internal](/img/image4.png)
 
-## Exercise 1-3: Rubrik CDM API Authentication (using curl) and using the API from command line
-In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication. 
+## Exercise 1-3: Authenticating using cURL
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication. 
 
 Generate a bearer token using the BasicAuth method using the curl command:
 
@@ -91,7 +91,7 @@ Try the same command without the `-k` flag
 
 
 ## Exercise 2-1: Using the API Explorer to generate a curl command to get cluster info 
-In Google Chrome, open a new tab and type `https://<node-ip-address>/docs/v1/playground`
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`
  
  Select the `/api/v1/cluster` endpoint
 
@@ -168,19 +168,19 @@ Endpoint to find missing snapshots:
 
 One important metric for daily operations is the cluster run rate, in other words: show how long do I have before the cluster runs out of storage capacity.
 
-`https://<node-ip-address>/api/internal/stats/runway_remaining`
+`https://$cluster_address/api/internal/stats/runway_remaining`
  
 ![Runway Remaining](/img/image12.png)
 
 ## Exercise 3-5: Get status info and counters about backup jobs for the past 24 hours.
 
-`https:// <node-ip-address>/docs/internal/playground/#!/47event/queryEventJobCountByStatus`
+`https:// $cluster_address/docs/internal/playground/#!/47event/queryEventJobCountByStatus`
 
 ![By Count](/img/image13.png)
 
-# SECTION 6 Other useful tricks and tools working with REST APIs
+# SECTION 4 Other Useful Tools with REST APIs
 
-## Exercise 6-1: How to create a .CSV output from JSON data.
+## Exercise 4-1: Creating a `.CSV` output from JSON data
 
 List all VM using the API explorer and copy all the data from the response body.
 
@@ -189,9 +189,8 @@ List all VM using the API explorer and copy all the data from the response body.
 Go to the following website: `https://json-csv.com/`
 Paste your JSON in the paste box.
 
-This will generate a .CSV file for you or even other formats. 
+This will generate a `.CSV` file for you or even other formats. 
 
 ![](/img/image14.png)
 
-## Exercise 6-2: Use Postman with Rubrik CDM API.
-
+## Exercise 6-2: Using Postman with Rubrik CDM API
