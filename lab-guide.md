@@ -15,7 +15,7 @@ The Rubrik RESTful API (v1) web page opens.
 
 ![API Docs](/img/image1.png)
 
-Browse through the Rubrik CDM API documentation and note the different endpoints available to you. 
+Browse through the Rubrik CDM API documentation and note the different endpoints available to you.
 
 | Note: Rubrik CDM API documentation is available online as well. You can find it [here](https://github.com/rubrikinc/api-documentation) |
 | --- |
