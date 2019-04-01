@@ -6,7 +6,7 @@ Our REST APIs are designed to be simple to understand and use, as well as be pre
 
 Through authenticated and encrypted interaction with the Rubrik REST API server, perform any of the operations that are available through the Rubrik web UI and many bulk-type operations that might otherwise be difficult or impossible to perform.
 
-A quick way to become familiar with the Rubrik REST API is to use the Rubrik REST API Explorer. 
+A quick way to become familiar with the Rubrik REST API is to use the Rubrik REST API Explorer.
 
 ## Exercise 1-1: Rubrik CDM API Documentation
 In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
