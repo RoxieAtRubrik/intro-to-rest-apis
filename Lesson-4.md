@@ -1,6 +1,6 @@
 # Lesson 4: Other Useful Tools with REST APIs
 
-
+The beauty of APIs is that it makes 
 
 ## Lesson 4-1: Creating a `.CSV` output from JSON data
 
@@ -17,3 +17,4 @@ This will generate a `.CSV` file for you as well as other formats.
 
 ## Lesson 4-2: Using Postman with Rubrik CDM API
 
+Instructions for using Postman with Rubrik REST APIs are located [here](https://github.com/rubrikinc/rubrik-postman)

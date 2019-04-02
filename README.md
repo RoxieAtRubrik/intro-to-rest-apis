@@ -14,7 +14,7 @@ To get started, follow the steps outlined in each lesson.
 
 * Exercise can be found [here](Lesson-2.md).
 
-**Lesson 3: Using a REST API to Make Changes**
+**Lesson 3: Retrieving Information for Daily Operations/Tasks**
 
 * Exercise can be found [here](Lesson-3.md).
 
