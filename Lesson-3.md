@@ -9,7 +9,7 @@ Instead of the UI dashboard you can also find the Unprotected VMs using the API.
 Use the API explorer to find all the VMware VMs without an SLA assigned. 
 
 ![Unassigned VMs](/img/image3-1.png)
-
+
 Note how parameters are used in the URL.
 
 Review the response body to find out how many VMs have no SLA assigned.
@@ -17,7 +17,7 @@ Review the response body to find out how many VMs have no SLA assigned.
 ![Unassigned VMs Response](/img/image3-2.png)
 
 Use the API Explorer to find the first VMware VM without an SLA assigned. Hint: use a parameter to specify the amount of VMs you want to report on.
-
+
 ## Lesson 3-2: Using the API Explorer to Get Information on a Specific Object
 
 The Rubrik CDM API uses IDs to refer to objects; for instance, a specific VMware VM. You can use the API Explorer to find the object ID for a specific VM. 
