@@ -20,7 +20,7 @@ Browse through the Rubrik CDM API documentation and note the different endpoints
 
 | Note: Rubrik CDM API documentation is available online as well. You can find it [here](https://github.com/rubrikinc/api-documentation) |
 | --- |
-
+
 ## Lesson 1-2: Authenticating Using API Explorer
 
 In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
@@ -53,7 +53,7 @@ Generate a bearer token using the BasicAuth method using the cURL command:
 
 `curl -k -u admin:pass -X POST "https://$cluster_address/api/v1/session"`
 
-In this case, <username:password> is the username for an Admin account on the host Rubrik cluster, a colon, and the account password. For example, this command may resemble:
+In this case, `username:password` is the username for an Admin account on the host Rubrik cluster, a colon, and the account password. For example, this command may resemble:
 
 `curl -k -u admin:Rubrik123!! -X POST "https://192.168.2.150/api/v1/session"`
 
