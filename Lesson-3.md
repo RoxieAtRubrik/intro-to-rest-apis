@@ -1,4 +1,5 @@
 # Lesson 3: Retrieving Information for Daily Operations/Tasks
+# Lesson 3: Using a REST API to Make Changes
 
 ## Lesson 3-1: Using the API Explorer to get Number of Unassigned VMs (VMware)
 
@@ -8,7 +9,7 @@ Use the API explorer to find all the VMware VMs without an SLA assigned.
 
 ![Unassigned VMs](/img/image6.png)
 
-Note how parameters are used in the URL. 
+Note how parameters are used in the URL.
 
 Review the response body to find out how many VMs have no SLA assigned.
 
@@ -26,7 +27,7 @@ You can also use the GUI to find a specific VM by name, and then copy the ID fro
 
 ![Object ID-GUI](/img/image9.png)
 
-Find the object ID for a specific VM and then paste the ID into the right parameter to get the details for that VM. 
+Find the object ID for a specific VM and then paste the ID into the right parameter to get the details for that VM.
 
 ![Paste ID](/img/image10.png)
 
@@ -34,7 +35,7 @@ The ID is often used across endpoints; the following image provides another exam
 
 ![Use ID for Snapshot List](/img/image11.png)
 
-## Lesson 3-3: find if there are missed snapshots for a specific VM 
+## Lesson 3-3: find if there are missed snapshots for a specific VM
 
 Using the ID gathered in the previous exercises, find the endpoint and check if there were any missed snapshots for that specific VM. 
 
@@ -50,7 +51,7 @@ One important metric for daily operations is the cluster run rate, in other word
  
 ![Runway Remaining](/img/image12.png)
 
-## Lesson 3-5: Get status info and counters about backup jobs for the past 24 hours.
+## Lesson 3-5: Get status info and counters about backup jobs for the past 24 hours
 
 `https:// $cluster_address/docs/internal/playground/#!/47event/queryEventJobCountByStatus`
 

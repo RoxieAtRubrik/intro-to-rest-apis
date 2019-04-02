@@ -37,9 +37,9 @@ Select the `/api/v1/cluster` endpoint
 
 Press the **Try it out!** button
 
-Copy and paste the curl command
+Copy and paste the cURL command
 
-Execute the curl command in the CLI
+Execute the cURL command in the CLI.
 
 Why does it give an error?
 

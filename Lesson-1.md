@@ -14,24 +14,32 @@ In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`. Th
 
 The Rubrik RESTful API (v1) web page opens.
 
-![API Docs](/img/image1.png)
+![API Docs](/img/image1-1.png)
 
 Browse through the Rubrik CDM API documentation and note the different endpoints available to you.
 
 | Note: Rubrik CDM API documentation is available online as well. You can find it [here](https://github.com/rubrikinc/api-documentation) |
 | --- |
 
-## Lesson 1-2: Rubrik CDM API Explorer 
+## Lesson 1-2: Authenticating Using API Explorer
 
 In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
 The Rubrik RESTful API Explorer page opens.
 
-![API Explorer-v1](/img/image2.png)
+![API Explorer-v1](/img/image1-2.png)
 
-On the top-right hand of the page, click **Authorize**. The Available Authorizations page opens.
+On the top-right hand of the page, click **Authorize**.
 
-![Available Authorizations](/img/image3.png)
+![Authorize](/img/image1-3.png)
+
+The Available Authorizations page opens.
+
+![Available Authorizations](/img/image1-4.png)
+
+* **BasicAuth authentication** - uses the HTTP Basic Authentication method and requires you to include the user credentials with each API call. Since each API call made using the BasicAuth method is separately authenticated, you do not need to manage the session state. You also do not need to log out of a session, since this method does not create a session.
+
+* **Token authentication** - creates a token at the beginning of a session and then uses that token to authenticate the API calls that are made during the session. The token remains valid for the session - normally 30 minutes after the last activity.
 
 Enter the Rubrik CDM credential information found in [Lab Topology](/lab-topology.md).
 
@@ -39,11 +47,15 @@ Click **Authorize**.
 
 ## Lesson 1-3: Authenticating using cURL
 
-In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication. 
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication.
 
-Generate a bearer token using the BasicAuth method using the curl command:
+Generate a bearer token using the BasicAuth method using the cURL command:
 
 `curl -k -u admin:pass -X POST "https://$cluster_address/api/v1/session"`
+
+In this case, <username:password> is the username for an Admin account on the host Rubrik cluster, a colon, and the account password. For example, this command may resemble:
+
+`curl -k -u admin:Rubrik123!! -X POST "https://192.168.2.150/api/v1/session"`
 
 The Rubrik REST API server returns to following response body:
 
