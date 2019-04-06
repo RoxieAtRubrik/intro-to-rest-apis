@@ -1,3 +1,7 @@
+| Difficulty level: Advanced | 
+| --- |
+
+
 # Lesson 4: Other Useful Tools with REST APIs
 
 The beauty of APIs is that it makes 
