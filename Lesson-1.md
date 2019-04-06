@@ -52,7 +52,7 @@ Click **Authorize**.
 
 In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/#section/Authentication/Authentication-session`. Review the chapter about authentication.
 
-Generate a bearer token using the BasicAuth method using the cURL command:
+In the jumpbox desktop, open Command Prompt. Generate a bearer token using the BasicAuth method using the cURL command:
 
 `curl -k -u admin:pass -X POST "https://$cluster_address/api/v1/session"`
 
