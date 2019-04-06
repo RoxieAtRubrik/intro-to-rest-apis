@@ -1,3 +1,7 @@
+| Difficulty level: Advanced | 
+| --- |
+
+
 # Lesson 3: Retrieving Information for Daily Operations/Tasks
 
 Think of all the daily activities that can be automated. Integrations can be written to interact with REST APIs. This section will walk you through using APIs for daily operations.
