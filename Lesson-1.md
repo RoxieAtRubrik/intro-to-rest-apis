@@ -1,4 +1,7 @@
-# Lesson 1: Rubrik API Basics
+| Difficulty level: Beginner | 
+| --- |
+
+# Lesson 1: API Basics
 
 The Rubrik CDM APIs are organized to conform the design principles of Representational State Transfer (REST). We also use the JSON data format for requests and responses. Whether you will be using our APIs directly to make your own custom integration or interacting with our SDKs, it's still worth taking the time to familiarize yourself on how REST APIs work and what they can do for you.
 
@@ -8,7 +11,7 @@ Through authenticated and encrypted interaction with the Rubrik REST API server,
 
 A quick way to become familiar with the Rubrik REST API is to use the Rubrik REST API Explorer.
 
-## Lesson 1-1: Rubrik CDM API Documentation
+## Lesson 1-1: API Documentation
 
 In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
 
