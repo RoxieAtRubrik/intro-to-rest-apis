@@ -1,3 +1,6 @@
+| Difficulty level: Beginner | 
+| --- |
+
 # Lesson 2: Using a REST API to Retrieve Information
 
 APIs are extremely useful for gathering large amounts of data very quickly. This exercise will walk you through retrieving information leveraging REST APIs.  
