@@ -2,6 +2,8 @@
 
 Welcome to the Introduction to APIs module! This module consists of 4 lessons to help you learn the fundamentals required to interact with REST APIs.
 
+Workshop slides can be found [here](/Introduction%20to%20APIs.pdf). 
+
 ## :pencil: Lessons
 
 To get started, follow the steps outlined in each lesson. 
