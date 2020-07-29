@@ -46,7 +46,7 @@ Using the ID gathered in the previous exercises, find the endpoint and check if 
 
 Endpoint to find missing snapshots:
 
-`https:// <node-ip-addres>/docs/v1/playground/#!/47vmware47vm/missedSnapshots`
+`https://$cluster_address/docs/v1/playground/#!/47vmware47vm/missedSnapshots`
 
 ## Lesson 3-4: Get cluster run rate
 
