@@ -4,7 +4,7 @@
 
 # Lesson 4: Other Useful Tools with REST APIs
 
-The beauty of APIs is that it makes 
+The beauty of APIs is that it makes a platform naturally extensible. This allows you to use a plethora of tooling. 
 
 ## Lesson 4-1: Creating a `.CSV` output from JSON data
 
