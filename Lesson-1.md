@@ -10,10 +10,10 @@ Our REST APIs are designed to be simple to understand and use, as well as be pre
 Through authenticated and encrypted interaction with the Rubrik REST API server, perform any of the operations that are available through the Rubrik web UI and many bulk-type operations that might otherwise be difficult or impossible to perform.
 
 A quick way to become familiar with the Rubrik REST API is to use the Rubrik REST API Explorer.
-
+
 ## Lesson 1-1: API Documentation
 
-In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`. The node IP information can be found in [Lab Topology](/lab-topology.md).
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1`.
 
 The Rubrik RESTful API (v1) web page opens.
 
@@ -26,7 +26,7 @@ Browse through the Rubrik CDM API documentation and note the different endpoints
 
 ## Lesson 1-2: Authenticating Using API Explorer
 
-In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md).
+In Google Chrome, open a new tab and type `https://$cluster_address/docs/v1/playground`. 
 
 The Rubrik RESTful API Explorer page opens.
 
@@ -44,7 +44,7 @@ The Available Authorizations page opens.
 
 * **Token authentication** - creates a token at the beginning of a session and then uses that token to authenticate the API calls that are made during the session. The token remains valid for the session - normally 30 minutes after the last activity.
 
-Enter the Rubrik CDM credential information found in [Lab Topology](/lab-topology.md).
+Enter the Rubrik CDM credentials.
 
 Click **Authorize**.
 
@@ -58,7 +58,7 @@ In the jumpbox desktop, open Command Prompt. Generate a bearer token using the B
 
 In this case, `username:password` is the username for an Admin account on the host Rubrik cluster, a colon, and the account password. For example, this command may resemble:
 
-`curl -k -u admin:Rubrik123!! -X POST "https://192.168.2.150/api/v1/session"`
+`curl -k -u admin:Welcome10!Rubrik -X POST "https://10.0.2.10/api/v1/session"`
 
 The Rubrik REST API server returns to following response body:
 
