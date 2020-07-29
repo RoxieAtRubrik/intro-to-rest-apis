@@ -11,7 +11,7 @@ The API Explorer is a [Swagger](https://swagger.io/) page that documents the RES
 
 To use Rubrik’s API playground:
 
-If you haven't already, open a new Google Chrome tab and type `https://$cluster_address/docs/v1/playground`. The node IP information can be found in [Lab Topology](/lab-topology.md). In the top right-hand corner, click **Authorize** and authenticate if not done in [Lesson 1](/Lesson-1.md).
+If you haven't already, open a new Google Chrome tab and type `https://$cluster_address/docs/v1/playground`. In the top right-hand corner, click **Authorize** and authenticate if not done in [Lesson 1](/Lesson-1.md).
 
 Navigate to `/sla_domain` and click **Show/Hide**. Click **Get list of SLA Domains**.
 
@@ -32,7 +32,7 @@ Notice the **Response Body**. There should be at least one response for Gold. Th
 Select the `/api/v1/cluster` endpoint
 
 ![Cluster Endpoint](/img/image2-4.png)
-
+
 Press the **Try it out!** button
 
 Copy and paste the cURL command
